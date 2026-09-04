@@ -97,11 +97,6 @@ function renderCatalog() {
           <label>Stock<input type="number" min="0" step="1" value="${component.stock}" data-stock-input="${component.id}"></label>
           <button class="secondary-btn save-stock" type="button" data-id="${component.id}">Guardar</button>
         </div>
-        <div class="stock-control sale-control">
-          <label>Cantidad<input type="number" min="1" step="1" value="1" data-venta-input="${component.id}"></label>
-          <label>Cliente<input type="text" placeholder="Cliente web" data-venta-cliente="${component.id}"></label>
-          <button class="primary-btn confirm-sale" type="button" data-id="${component.id}">Confirmar venta</button>
-        </div>
         <p class="stock-label ${stockClass}"><i class="fa-solid fa-boxes-stacked"></i> ${component.stock} unidades</p>
         <div class="product-actions">
           <button class="secondary-btn edit-product" type="button" data-id="${component.id}"><i class="fa-solid fa-pen"></i> Editar</button>
@@ -114,9 +109,6 @@ function renderCatalog() {
   document
     .querySelectorAll('.save-stock')
     .forEach((button) => button.addEventListener('click', saveStock));
-  document
-    .querySelectorAll('.confirm-sale')
-    .forEach((button) => button.addEventListener('click', confirmarVenta));
   document
     .querySelectorAll('.edit-product')
     .forEach((button) => button.addEventListener('click', editProduct));
@@ -516,10 +508,6 @@ loginForm.addEventListener('submit', async (event) => {
     localStorage.setItem(tokenKey, result.token);
     showAdmin();
     loadComponents();
-    loadRequests();
-    loadSalesHistory();
-    loadEntregadas();
-    loadCanceladas();
   } catch (error) {
     setMessage('loginMessage', error.message, true);
   }
@@ -541,7 +529,6 @@ productForm.addEventListener('submit', async (event) => {
     setMessage('productMessage', editingId ? 'Producto actualizado.' : 'Producto agregado.');
     resetProductForm();
     await loadComponents();
-    await loadSalesHistory();
   } catch (error) {
     setMessage('productMessage', error.message, true);
   }
@@ -550,18 +537,10 @@ productForm.addEventListener('submit', async (event) => {
 document.getElementById('cancelEditButton').addEventListener('click', resetProductForm);
 document.getElementById('refreshButton').addEventListener('click', async () => {
   await loadComponents();
-  await loadRequests();
-  await loadSalesHistory();
-  await loadEntregadas();
-  await loadCanceladas();
 });
 document.getElementById('logoutButton').addEventListener('click', () => logout());
 
 if (getToken()) {
   showAdmin();
   loadComponents();
-  loadRequests();
-  loadSalesHistory();
-  loadEntregadas();
-  loadCanceladas();
 }

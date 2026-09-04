@@ -47,7 +47,6 @@
           <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#componentes">Venta de Componentes</a></li>
             <li><a href="#galeria">Trabajos</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#contacto" class="btn btn-primary">Contáctanos</a></li>
@@ -127,50 +126,6 @@
               <a href="#contacto" class="btn btn-primary btn-sm">Cotizar Proyecto</a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Venta de Componentes Section -->
-      <section id="componentes" class="products-section">
-        <div class="container">
-          <div class="section-title">
-            <h2>Venta de Componentes</h2>
-            <p>Equipos, repuestos y hardware de alta calidad con garantía para PCs y laptops.</p>
-          </div>
-
-          <!-- Filtros por Categoría -->
-          <div class="filters-container">
-            <button class="filter-btn active" data-category="Todos">Todos</button>
-            <button class="filter-btn" data-category="Almacenamiento">Almacenamiento</button>
-            <button class="filter-btn" data-category="Memoria RAM">Memoria RAM</button>
-            <button class="filter-btn" data-category="Procesadores">Procesadores</button>
-            <button class="filter-btn" data-category="Laptops y Repuestos">
-              Repuestos / Accesorios
-            </button>
-          </div>
-
-          <!-- Catálogo de Productos -->
-          <div id="catalogoComponentes" class="products-grid">
-            <div class="loading-catalog">
-              <i class="fa-solid fa-spinner fa-spin"></i> Cargando catálogo de componentes...
-            </div>
-          </div>
-
-          <!-- Mapa de referencia: estaciones de recojo (Línea 1 del Metro de Lima) -->
-          <figure class="station-map">
-            <figcaption class="station-map-title">
-              <i class="fa-solid fa-train-subway"></i> Recojo disponible en las estaciones de la
-              Línea 1 del Metro de Lima
-            </figcaption>
-            <img
-              src="assets/mapa-linea1-metro.png"
-              alt="Mapa de estaciones de la Línea 1 del Metro de Lima"
-              loading="lazy"
-            />
-            <figcaption class="station-map-credit">
-              Mapa: CanalesQuintanilla / Wikimedia Commons (CC BY-SA 3.0)
-            </figcaption>
-          </figure>
         </div>
       </section>
 
@@ -469,7 +424,6 @@
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#componentes">Componentes</a></li>
             <li><a href="#galeria">Trabajos</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#nosotros">Por qué Elegirnos</a></li>
@@ -497,12 +451,6 @@
       </div>
     </footer>
 
-    <!-- Flotante: Recojo en estaciones de Lima (izquierda) -->
-    <a href="#componentes" class="recojo-float" aria-label="Recojo en las estaciones de Lima">
-      <i class="fa-solid fa-train-subway"></i>
-      <span>Recojo en las estaciones de Lima</span>
-    </a>
-
     <!-- Botón flotante de WhatsApp -->
     <a
       href="https://wa.me/51901348331?text=Hola%20COMPUTEKNO,%20vengo%20de%20la%20p%C3%A1gina%20web.%20Quisiera%20consultar%20sobre%20sus%20servicios."
@@ -513,119 +461,6 @@
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-
-    <!-- MODAL: Selección de estación de recojo -->
-    <div id="modalEstacion" class="modal-overlay" aria-hidden="true">
-      <div class="modal modal-station">
-        <button type="button" class="modal-close" onclick="omitirEstacion()" aria-label="Cerrar">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="modal-header">
-          <div class="modal-icon"><i class="fa-solid fa-train-subway"></i></div>
-          <h3>🚆 ¿En qué estación retiras tu producto?</h3>
-          <p>Elige la estación del Metro de Lima más cercana (opcional)</p>
-        </div>
-        <div class="station-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input
-            type="text"
-            id="inputBusquedaEstacion"
-            placeholder="Busca tu estación..."
-            autocomplete="off"
-          />
-        </div>
-        <div id="listaEstaciones" class="station-list"></div>
-        <div class="station-actions">
-          <button type="button" class="btn-station-skip" onclick="omitirEstacion()">Omitir</button>
-          <button type="button" class="btn-station-continue" onclick="continuarTrasEstacion()">
-            Continuar <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: Opciones de atención al comprar -->
-    <div id="modalOpciones" class="modal-overlay" aria-hidden="true">
-      <div class="modal modal-options">
-        <button
-          type="button"
-          class="modal-close"
-          onclick="cerrarModalOpciones()"
-          aria-label="Cerrar"
-        >
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="modal-header">
-          <div class="modal-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <h3>¿Cómo deseas continuar?</h3>
-          <p>Elige una opción para atender tu compra</p>
-          <div id="opcionesProductoInfo" class="modal-product-info">Cargando producto...</div>
-        </div>
-        <div class="modal-options-grid">
-          <button type="button" class="option-btn option-pay" onclick="pagarProducto()">
-            <i class="fa-solid fa-qrcode"></i>
-            <span class="option-title">Pagar producto</span>
-            <span class="option-sub">Ver QR y datos de pago</span>
-          </button>
-          <button type="button" class="option-btn option-consult" onclick="consultarProducto()">
-            <i class="fa-solid fa-comments"></i>
-            <span class="option-title">Consultar</span>
-            <span class="option-sub">Preguntas sobre el producto</span>
-          </button>
-          <button type="button" class="option-btn option-service" onclick="servicioTecnico()">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <span class="option-title">Servicio técnico</span>
-            <span class="option-sub">Instalación o soporte</span>
-          </button>
-          <button
-            type="button"
-            class="option-btn option-attention"
-            onclick="atencionPersonalizada()"
-          >
-            <i class="fa-solid fa-headset"></i>
-            <span class="option-title">Atención personalizada</span>
-            <span class="option-sub">Hablar con un asesor</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: Pago con QR -->
-    <div id="modalPago" class="modal-overlay" aria-hidden="true">
-      <div class="modal modal-payment">
-        <button type="button" class="modal-close" onclick="cerrarModalPago()" aria-label="Cerrar">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="modal-header">
-          <div class="modal-icon"><i class="fa-solid fa-qrcode"></i></div>
-          <h3>Realiza tu pago</h3>
-          <p>Escanea el QR o transfiere a nuestro número para completar tu compra.</p>
-        </div>
-        <div class="payment-qr">
-          <img id="qrPagoImagen" src="assets/QR DE PAGO.png" alt="QR de pago COMPUTEKNO" />
-        </div>
-        <div class="payment-phone">
-          <span>Número de pago</span>
-          <div class="phone-row">
-            <span id="telefonoPago">+51 901 348 331</span>
-            <button type="button" class="btn-copy" onclick="copiarNumero()" title="Copiar número">
-              <i class="fa-solid fa-copy"></i>
-            </button>
-          </div>
-          <p id="productoPagoInfo"></p>
-          <p id="estacionPagoInfo" class="payment-station"></p>
-        </div>
-        <a
-          id="btnWhatsAppPago"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-whatsapp-modal"
-        >
-          <i class="fa-brands fa-whatsapp"></i> Continuar por WhatsApp
-        </a>
-      </div>
-    </div>
 
     <script src="config.js"></script>
     <script src="script.js"></script>

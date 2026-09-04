@@ -1,4 +1,4 @@
-/* exported solicitarServicio, comprarComponente, continuarTrasEstacion, pagarProducto, copiarNumero, consultarProducto, servicioTecnico, atencionPersonalizada */
+/* exported solicitarServicio */
 // --- BUSCADOR DE SERVICIOS ---
 const API_URL = window.COMPUTEKNO_CONFIG?.API_URL || 'http://127.0.0.1:3000';
 const IMAGEN_COMPONENTE_POR_DEFECTO = 'assets/26157-MK10212A.jpg';
@@ -293,8 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
   cargarComponentes('Todos');
   inicializarFiltros();
 
-  // Cargar estaciones de recojo desde la base de datos
-  cargarEstacionesDesdeAPI();
 });
 
 // --- Cambio de estilo en Navbar al hacer scroll ---
@@ -826,58 +824,4 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// ==========================================
-// Polling: Actualización en tiempo real (index.html)
-// ==========================================
-
-// Configura el intervalo de sondeo (ej. cada 1000 ms = 1 segundo)
-const TIEMPO_POLLING = 1000;
-let pollingProductosId = null;
-
-async function refrescarCatalogoLanding() {
-  try {
-    const categoriaActiva =
-      document.querySelector('.filter-btn.active')?.dataset.category || 'Todos';
-
-    if (typeof cargarProductos === 'function') {
-      await cargarProductos(categoriaActiva);
-    }
-  } catch (error) {
-    console.error('Error al actualizar productos en segundo plano:', error);
-  }
-}
-
-function iniciarPollingProductos() {
-  if (pollingProductosId) {
-    return;
-  }
-
-  pollingProductosId = setInterval(refrescarCatalogoLanding, TIEMPO_POLLING);
-
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) {
-      refrescarCatalogoLanding();
-    }
-  });
-
-  window.addEventListener('storage', (event) => {
-    if (event.key === 'computekno:stock-sync') {
-      refrescarCatalogoLanding();
-    }
-  });
-}
-
 window.solicitarServicio = solicitarServicio;
-window.comprarComponente = comprarComponente;
-window.continuarTrasEstacion = continuarTrasEstacion;
-window.pagarProducto = pagarProducto;
-window.copiarNumero = copiarNumero;
-window.consultarProducto = consultarProducto;
-window.servicioTecnico = servicioTecnico;
-window.atencionPersonalizada = atencionPersonalizada;
-window.solicitarComponente = solicitarComponente;
-
-// Iniciar el sondeo automáticamente cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-  iniciarPollingProductos();
-});
