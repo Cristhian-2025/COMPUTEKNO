@@ -1,0 +1,16 @@
+{
+  "name": "computekno-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend estático de COMPUTEKNO",
+  "scripts": {
+    "start": "npx live-server --port=5500 --host=127.0.0.1 --open=./index.html --quiet",
+    "lint": "eslint . --ext .js --ignore-path ../.eslintignore",
+    "format": "prettier --write \"**/*.{js,html,css,json,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0"
+  }
+}

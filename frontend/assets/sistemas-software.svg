@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra -->
+    <filter id="laptop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+    <filter id="screen-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Gradientes de la pantalla Windows 11 Bloom -->
+    <radialGradient id="win11-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a365d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <linearGradient id="bloom-core" x1="30%" y1="20%" x2="70%" y2="80%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="35%" stop-color="#3b82f6" />
+      <stop offset="70%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+
+    <linearGradient id="bloom-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="bloom-petal1" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="bloom-petal2" x1="80%" y1="10%" x2="20%" y2="90%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="60%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Gradiente chasis laptop -->
+    <linearGradient id="bezel-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="lid-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="base-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="40%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="base-lip" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Grupo completo laptop con sombra -->
+  <g filter="url(#laptop-shadow)">
+    
+    <!-- PANTALLA / TAPA SUPERIOR (Abierta frontal) -->
+    <!-- Marco exterior de la pantalla -->
+    <rect x="75" y="24" width="290" height="182" rx="10" fill="url(#bezel-grad)" stroke="url(#lid-border)" stroke-width="1.5" />
+
+    <!-- WebCam y sensor en el marco superior -->
+    <circle cx="220" cy="30.5" r="1.8" fill="#020617" />
+    <circle cx="220" cy="30.5" r="0.8" fill="#38bdf8" opacity="0.8" />
+    <circle cx="228" cy="30.5" r="1" fill="#052e16" />
+
+    <!-- Área de la pantalla LCD -->
+    <rect x="83" y="37" width="274" height="162" rx="3" fill="url(#win11-bg)" />
+
+    <!-- Clip-path para que el wallpaper no desborde la pantalla LCD -->
+    <g clip-path="url(#screen-clip)">
+      <clipPath id="screen-clip">
+        <rect x="83" y="37" width="274" height="162" rx="3" />
+      </clipPath>
+
+      <!-- Resplandor ambiental de fondo Windows 11 -->
+      <circle cx="220" cy="115" r="70" fill="#1d4ed8" opacity="0.35" filter="url(#screen-glow)" />
+      <circle cx="220" cy="118" r="40" fill="#38bdf8" opacity="0.25" filter="url(#screen-glow)" />
+
+      <!-- Pétalos / Capas del Bloom Wallpaper de Windows 11 -->
+      <!-- Pétalo trasero izquierdo -->
+      <path d="M 220 120 C 180 80, 160 100, 170 135 C 178 160, 205 150, 220 120 Z" fill="url(#bloom-petal1)" opacity="0.85" />
+      <!-- Pétalo trasero derecho -->
+      <path d="M 220 120 C 260 75, 285 95, 275 130 C 268 155, 235 152, 220 120 Z" fill="url(#bloom-petal2)" opacity="0.85" />
+
+      <!-- Pétalo central izquierdo -->
+      <path d="M 220 124 C 185 95, 175 125, 185 145 C 195 160, 215 155, 220 124 Z" fill="url(#bloom-core)" />
+      <!-- Pétalo central derecho -->
+      <path d="M 220 124 C 255 90, 268 120, 258 142 C 248 160, 225 155, 220 124 Z" fill="url(#bloom-core)" />
+
+      <!-- Pliegues / Luces superiores características del Bloom -->
+      <path d="M 220 118 C 205 90, 215 75, 220 72 C 225 75, 235 90, 220 118 Z" fill="url(#bloom-light)" />
+      <path d="M 220 124 C 200 105, 190 120, 198 138 C 208 148, 220 135, 220 124 Z" fill="url(#bloom-light)" />
+      <path d="M 220 124 C 240 100, 250 115, 242 135 C 234 148, 220 135, 220 124 Z" fill="url(#bloom-light)" />
+
+      <!-- Brillo/Reflejo diagonal sutil en la pantalla -->
+      <polygon points="83,37 170,37 110,199 83,199" fill="#ffffff" opacity="0.04" />
+
+      <!-- BARRA DE TAREAS WINDOWS 11 (Centrada) -->
+      <rect x="83" y="184" width="274" height="15" fill="#0b1329" opacity="0.88" />
+      <line x1="83" y1="184" x2="357" y2="184" stroke="#334155" stroke-width="0.5" opacity="0.5" />
+
+      <!-- Íconos centrados de la barra de tareas -->
+      <g transform="translate(198, 187)">
+        <!-- Logo Windows 11 (4 cuadrados azules) -->
+        <rect x="0" y="2" width="3.6" height="3.6" rx="0.5" fill="#0078d4" />
+        <rect x="4.4" y="2" width="3.6" height="3.6" rx="0.5" fill="#0078d4" />
+        <rect x="0" y="6.4" width="3.6" height="3.6" rx="0.5" fill="#0078d4" />
+        <rect x="4.4" y="6.4" width="3.6" height="3.6" rx="0.5" fill="#0078d4" />
+
+        <!-- Ícono Buscar (Lupa) -->
+        <circle cx="15" cy="5.5" r="2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <line x1="16.5" y1="7" x2="18" y2="8.5" stroke="#94a3b8" stroke-width="0.8" stroke-linecap="round" />
+
+        <!-- Ícono Task View -->
+        <rect x="23" y="3.5" width="5" height="5" rx="0.8" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <rect x="25.5" y="2" width="4.5" height="4.5" rx="0.8" fill="none" stroke="#64748b" stroke-width="0.7" />
+
+        <!-- Ícono Widgets -->
+        <rect x="34" y="3" width="6" height="6" rx="1.2" fill="#38bdf8" />
+        <rect x="35.5" y="4.5" width="3" height="3" rx="0.6" fill="#ffffff" />
+
+        <!-- Ícono Explorador de Archivos -->
+        <rect x="43.5" y="4" width="6" height="5" rx="0.8" fill="#eab308" />
+        <path d="M 43.5 4 L 46 4 L 47 5 L 49.5 5" stroke="#ca8a04" stroke-width="0.5" fill="none" />
+
+        <!-- Ícono Edge -->
+        <circle cx="55.5" cy="6" r="3" fill="#0284c7" />
+        <circle cx="56" cy="5.5" r="1.5" fill="#38bdf8" />
+      </g>
+
+      <!-- Bandeja del sistema (Hora y fecha a la derecha) -->
+      <g transform="translate(330, 188.5)">
+        <text x="0" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="3.5" fill="#e2e8f0" font-weight="600">12:00</text>
+        <text x="0" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="2.8" fill="#94a3b8">Windows 11</text>
+      </g>
+
+      <!-- Íconos de wifi y volumen en la bandeja -->
+      <g transform="translate(320, 191)">
+        <path d="M0,3 A3,3 0 0,1 4,3" fill="none" stroke="#94a3b8" stroke-width="0.6" />
+        <circle cx="2" cy="3.5" r="0.5" fill="#94a3b8" />
+      </g>
+    </g>
+
+    <!-- BISAGRA DE LA LAPTOP -->
+    <rect x="170" y="204" width="100" height="4" rx="2" fill="#334155" stroke="#1e293b" stroke-width="0.5" />
+
+    <!-- BASE / TECLADO DE LA LAPTOP (Perspectiva inferior) -->
+    <!-- Base principal metálica -->
+    <path d="M 35 212 L 405 212 L 375 224 L 65 224 Z" fill="url(#base-top)" stroke="#94a3b8" stroke-width="0.8" />
+    
+    <!-- Hendidura frontal para abrir la tapa -->
+    <rect x="195" y="212" width="50" height="2.5" rx="1.2" fill="#475569" />
+
+    <!-- Borde inferior / perfil frontal de la base -->
+    <path d="M 65 224 L 375 224 L 368 229 L 72 229 Z" fill="url(#base-lip)" stroke="#0f172a" stroke-width="0.6" />
+
+    <!-- Reflejo frontal en el bisel de aluminio -->
+    <line x1="75" y1="224.5" x2="365" y2="224.5" stroke="#f8fafc" stroke-width="0.8" opacity="0.6" />
+  </g>
+</svg>

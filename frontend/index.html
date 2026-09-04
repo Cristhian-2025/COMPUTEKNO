@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMPUTEKNO | Soporte Técnico y Desarrollo Web</title>
+    <meta
+      name="description"
+      content="Soporte técnico profesional para computadoras y laptops, instalación de sistemas, y desarrollo de sistemas web en COMPUTEKNO."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome para iconos -->
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Barra de anuncios -->
+    <div class="announcement-bar">
+      <p>
+        <i class="fa-solid fa-circle-check"></i> <strong>Servicio Profesional:</strong> Emitimos
+        Recibo por Honorarios Electrónico ante SUNAT.
+      </p>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+          COMPUTEKNO
+        </a>
+
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#componentes">Venta de Componentes</a></li>
+            <li><a href="#galeria">Trabajos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto" class="btn btn-primary">Contáctanos</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Servicios Section -->
+      <section id="servicios" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <p>SOPORTE PROFESIONAL PRESENCIAL Y REMOTO</p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Servicio: Sistemas y Software -->
+            <div class="service-card glass featured">
+              <img
+                src="assets/windows-11.jpg"
+                alt="Windows 11 para sistemas y software"
+                class="service-photo"
+              />
+              <h3>Soporte de Software</h3>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Instalación de Windows y Office</li>
+                <li><i class="fa-solid fa-check"></i> Clonación de S.O</li>
+                <li><i class="fa-solid fa-check"></i> Migración de archivos</li>
+                <li><i class="fa-solid fa-check"></i> Copia de seguridad de datos</li>
+                <li><i class="fa-solid fa-check"></i> más servicios</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-sm">Consulta precios</a>
+            </div>
+
+            <!-- Servicio: Soporte y Mantenimiento -->
+            <div class="service-card glass featured">
+              <img
+                src="assets/soporte-tecnico.jpg"
+                alt="Técnico reparando una laptop"
+                class="service-photo"
+              />
+              <h3>Soporte Técnico</h3>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Mantenimiento de PC y Laptops</li>
+                <li><i class="fa-solid fa-check"></i> Repotenciación de equipos</li>
+                <li><i class="fa-solid fa-check"></i> Remoto y presencial</li>
+                <li><i class="fa-solid fa-check"></i>Redes y conectividad</li>
+                <li><i class="fa-solid fa-check"></i> más servicios</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-sm">Consulta precios</a>
+            </div>
+
+            <!-- Servicio: Desarrollo Web -->
+            <div class="service-card glass featured">
+              <img
+                src="assets/innovacion-1.jpg"
+                alt="Innovación y desarrollo de sistemas web"
+                class="service-photo"
+              />
+              <h3>Desarrollo Web y Soluciones Digitales</h3>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Aplicaciones Móviles</li>
+                <li><i class="fa-solid fa-check"></i> Páginas Web Corporativas</li>
+                <li>
+                  <i class="fa-solid fa-check"></i> Implementación de IA y automatización de
+                  procesos
+                </li>
+                <li><i class="fa-solid fa-check"></i> Marketing Digital</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary btn-sm">Cotizar Proyecto</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Venta de Componentes Section -->
+      <section id="componentes" class="products-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Venta de Componentes</h2>
+            <p>Equipos, repuestos y hardware de alta calidad con garantía para PCs y laptops.</p>
+          </div>
+
+          <!-- Filtros por Categoría -->
+          <div class="filters-container">
+            <button class="filter-btn active" data-category="Todos">Todos</button>
+            <button class="filter-btn" data-category="Almacenamiento">Almacenamiento</button>
+            <button class="filter-btn" data-category="Memoria RAM">Memoria RAM</button>
+            <button class="filter-btn" data-category="Procesadores">Procesadores</button>
+            <button class="filter-btn" data-category="Laptops y Repuestos">
+              Repuestos / Accesorios
+            </button>
+          </div>
+
+          <!-- Catálogo de Productos -->
+          <div id="catalogoComponentes" class="products-grid">
+            <div class="loading-catalog">
+              <i class="fa-solid fa-spinner fa-spin"></i> Cargando catálogo de componentes...
+            </div>
+          </div>
+
+          <!-- Mapa de referencia: estaciones de recojo (Línea 1 del Metro de Lima) -->
+          <figure class="station-map">
+            <figcaption class="station-map-title">
+              <i class="fa-solid fa-train-subway"></i> Recojo disponible en las estaciones de la
+              Línea 1 del Metro de Lima
+            </figcaption>
+            <img
+              src="assets/mapa-linea1-metro.png"
+              alt="Mapa de estaciones de la Línea 1 del Metro de Lima"
+              loading="lazy"
+            />
+            <figcaption class="station-map-credit">
+              Mapa: CanalesQuintanilla / Wikimedia Commons (CC BY-SA 3.0)
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Estadísticas / Cifras de la Empresa -->
+      <section id="estadisticas" class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+              <span class="stat-number" data-target="1200">0</span>
+              <span class="stat-suffix">+</span>
+              <p class="stat-label">Clientes Atendidos</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <span class="stat-number" data-target="3500">0</span>
+              <span class="stat-suffix">+</span>
+              <p class="stat-label">Equipos Reparados</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+              <span class="stat-number" data-target="7">0</span>
+              <span class="stat-suffix"> Años</span>
+              <p class="stat-label">De Experiencia</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+              <span class="stat-number" data-target="98">0</span>
+              <span class="stat-suffix">%</span>
+              <p class="stat-label">Satisfacción del Cliente</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería de Trabajos Realizados -->
+      <section id="galeria" class="gallery-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nuestros Trabajos</h2>
+            <p>Proyectos recientes y soluciones que hemos implementado para nuestros clientes.</p>
+          </div>
+
+          <div class="gallery-filter">
+            <button class="gallery-filter-btn active" data-filter="all">Todos</button>
+            <button class="gallery-filter-btn" data-filter="soporte">Soporte Técnico</button>
+            <button class="gallery-filter-btn" data-filter="web">Desarrollo Web</button>
+            <button class="gallery-filter-btn" data-filter="redes">Redes</button>
+          </div>
+
+          <div class="gallery-grid" id="galeriaGrid">
+            <div class="gallery-item" data-filter="soporte">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=500&q=80"
+                  alt="Mantenimiento de PC"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Soporte Técnico</span>
+                  <h4>Mantenimiento Preventivo</h4>
+                  <p>
+                    Limpieza profunda y optimización de rendimiento para PC gaming de alto nivel.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item" data-filter="web">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                  alt="Desarrollo Web"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Desarrollo Web</span>
+                  <h4>Sistema de Inventario</h4>
+                  <p>Plataforma web personalizada para gestión de inventarios de empresa.</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item" data-filter="soporte">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=500&q=80"
+                  alt="Repotenciación laptop"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Soporte Técnico</span>
+                  <h4>Repotenciación de Laptop</h4>
+                  <p>Upgrade de SSD y RAM en laptop HP para un aumento de velocidad del 400%.</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item" data-filter="redes">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80"
+                  alt="Cableado estructurado"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Redes</span>
+                  <h4>Cableado Estructurado</h4>
+                  <p>Instalación de red empresarial con 24 puntos para oficina corporativa.</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item" data-filter="web">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=500&q=80"
+                  alt="Landing Page"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Desarrollo Web</span>
+                  <h4>Landing Page Corporativa</h4>
+                  <p>Diseño y desarrollo de sitio web profesional para empresa de servicios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item" data-filter="soporte">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=500&q=80"
+                  alt="Ensamblaje PC"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <span class="gallery-tag">Soporte Técnico</span>
+                  <h4>Ensamblaje PC a Medida</h4>
+                  <p>PC gaming personalizada con Ryzen 7 y RTX 4060 para cliente profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios de Clientes -->
+      <section id="testimonios" class="testimonials-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p>Historias reales de clientes satisfechos con nuestros servicios.</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Mi laptop estaba demasiado lenta y en COMPUTEKNO la dejaron como nueva. Le
+                instalaron un SSD y le ampliaron la RAM. El cambio fue increíble, ahora enciende en
+                segundos."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="author-info">
+                  <h4>Carlos Mendoza</h4>
+                  <span>Ingeniero Civil</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card featured-testimonial">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Nos desarrollaron un sistema web de gestión para nuestra empresa. El resultado fue
+                impresionante: profesional, rápido, y exactamente lo que necesitábamos. Muy
+                recomendados."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="author-info">
+                  <h4>María Elena Ríos</h4>
+                  <span>Gerente de Operaciones — LogiPerú S.A.C.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "El servicio de reparación fue rápido y el precio muy justo. Además, me dieron
+                consejos para el cuidado de mi equipo. Excelente atención al cliente, totalmente
+                confiables."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="author-info">
+                  <h4>Luis Alberto Paredes</h4>
+                  <span>Contador Público</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Por Qué Elegirnos -->
+      <section id="nosotros" class="why-us">
+        <div class="container">
+          <div class="why-us-content">
+            <div class="why-text">
+              <h2>Por qué Elegir COMPUTEKNO</h2>
+              <p>
+                Brindamos un servicio profesional, rápido y garantizado para asegurar que tu
+                tecnología funcione siempre a tu favor.
+              </p>
+              <div class="features">
+                <div class="feature-item">
+                  <i class="fa-solid fa-user-shield"></i>
+                  <div>
+                    <h4>Experiencia Comprobada</h4>
+                    <p>Técnicos especializados en diagnóstico y solución precisa.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fa-solid fa-bolt"></i>
+                  <div>
+                    <h4>Servicio Rápido</h4>
+                    <p>Atendemos tus urgencias tecnológicas en tiempo récord.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fa-solid fa-handshake"></i>
+                  <div>
+                    <h4>Garantía de Satisfacción</h4>
+                    <p>Todos nuestros servicios están respaldados por garantía.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA & Contacto -->
+      <section id="contacto" class="cta">
+        <div class="container cta-container glass">
+          <div class="cta-text">
+            <h2>¿Necesitas ayuda con tu equipo o proyecto?</h2>
+            <p>Escríbenos ahora mismo y recibe asesoría técnica inmediata.</p>
+            <p class="cta-specialist">
+              <i class="fa-solid fa-user-gear"></i> Atención personalizada por
+              <strong>Cristhian Sulca</strong>.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a
+              href="https://wa.me/51901348331?text=Hola%20COMPUTEKNO,%20vengo%20de%20la%20p%C3%A1gina%20web.%20Quisiera%20consultar%20sobre%20sus%20servicios."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp-large"
+            >
+              <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <a href="#" class="logo"> <i class="fa-solid fa-microchip"></i> COMPUTEKNO </a>
+          <p>Tu aliado en tecnología y desarrollo web.</p>
+          <div class="footer-tech-icons">
+            <i class="fa-brands fa-windows" title="Soporte para Windows"></i>
+            <i class="fa-brands fa-microsoft" title="Soporte para Microsoft Office"></i>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#componentes">Componentes</a></li>
+            <li><a href="#galeria">Trabajos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#nosotros">Por qué Elegirnos</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p class="footer-specialist">
+            <i class="fa-solid fa-user-gear"></i> Técnico responsable:
+            <strong>Cristhian Sulca</strong>
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +51 901 348 331</p>
+          <p><i class="fa-solid fa-envelope"></i> soporte@computekno.com</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Av. José Carlos Mariátegui, Villa Maria del
+            Triunfo, Lima, Perú
+          </p>
+        </div>
+      </div>
+      <!-- Franja de confianza (RUC + Facturación) -->
+      <div class="footer-trust">
+        <span class="footer-trust-item"><i class="fa-solid fa-microchip"></i> COMPUTEKNO</span>
+        <span class="footer-trust-sep">|</span>
+        <span class="footer-trust-item"><i class="fa-solid fa-id-card"></i> RUC 10489560751</span>
+      </div>
+    </footer>
+
+    <!-- Flotante: Recojo en estaciones de Lima (izquierda) -->
+    <a href="#componentes" class="recojo-float" aria-label="Recojo en las estaciones de Lima">
+      <i class="fa-solid fa-train-subway"></i>
+      <span>Recojo en las estaciones de Lima</span>
+    </a>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/51901348331?text=Hola%20COMPUTEKNO,%20vengo%20de%20la%20p%C3%A1gina%20web.%20Quisiera%20consultar%20sobre%20sus%20servicios."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL: Selección de estación de recojo -->
+    <div id="modalEstacion" class="modal-overlay" aria-hidden="true">
+      <div class="modal modal-station">
+        <button type="button" class="modal-close" onclick="omitirEstacion()" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon"><i class="fa-solid fa-train-subway"></i></div>
+          <h3>🚆 ¿En qué estación retiras tu producto?</h3>
+          <p>Elige la estación del Metro de Lima más cercana (opcional)</p>
+        </div>
+        <div class="station-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="inputBusquedaEstacion"
+            placeholder="Busca tu estación..."
+            autocomplete="off"
+          />
+        </div>
+        <div id="listaEstaciones" class="station-list"></div>
+        <div class="station-actions">
+          <button type="button" class="btn-station-skip" onclick="omitirEstacion()">Omitir</button>
+          <button type="button" class="btn-station-continue" onclick="continuarTrasEstacion()">
+            Continuar <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Opciones de atención al comprar -->
+    <div id="modalOpciones" class="modal-overlay" aria-hidden="true">
+      <div class="modal modal-options">
+        <button
+          type="button"
+          class="modal-close"
+          onclick="cerrarModalOpciones()"
+          aria-label="Cerrar"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3>¿Cómo deseas continuar?</h3>
+          <p>Elige una opción para atender tu compra</p>
+          <div id="opcionesProductoInfo" class="modal-product-info">Cargando producto...</div>
+        </div>
+        <div class="modal-options-grid">
+          <button type="button" class="option-btn option-pay" onclick="pagarProducto()">
+            <i class="fa-solid fa-qrcode"></i>
+            <span class="option-title">Pagar producto</span>
+            <span class="option-sub">Ver QR y datos de pago</span>
+          </button>
+          <button type="button" class="option-btn option-consult" onclick="consultarProducto()">
+            <i class="fa-solid fa-comments"></i>
+            <span class="option-title">Consultar</span>
+            <span class="option-sub">Preguntas sobre el producto</span>
+          </button>
+          <button type="button" class="option-btn option-service" onclick="servicioTecnico()">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span class="option-title">Servicio técnico</span>
+            <span class="option-sub">Instalación o soporte</span>
+          </button>
+          <button
+            type="button"
+            class="option-btn option-attention"
+            onclick="atencionPersonalizada()"
+          >
+            <i class="fa-solid fa-headset"></i>
+            <span class="option-title">Atención personalizada</span>
+            <span class="option-sub">Hablar con un asesor</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Pago con QR -->
+    <div id="modalPago" class="modal-overlay" aria-hidden="true">
+      <div class="modal modal-payment">
+        <button type="button" class="modal-close" onclick="cerrarModalPago()" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <h3>Realiza tu pago</h3>
+          <p>Escanea el QR o transfiere a nuestro número para completar tu compra.</p>
+        </div>
+        <div class="payment-qr">
+          <img id="qrPagoImagen" src="assets/QR DE PAGO.png" alt="QR de pago COMPUTEKNO" />
+        </div>
+        <div class="payment-phone">
+          <span>Número de pago</span>
+          <div class="phone-row">
+            <span id="telefonoPago">+51 901 348 331</span>
+            <button type="button" class="btn-copy" onclick="copiarNumero()" title="Copiar número">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+          <p id="productoPagoInfo"></p>
+          <p id="estacionPagoInfo" class="payment-station"></p>
+        </div>
+        <a
+          id="btnWhatsAppPago"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp-modal"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Continuar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

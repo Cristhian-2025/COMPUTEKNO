@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración | COMPUTEKNO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section id="loginView" class="login-card">
+        <a class="brand" href="index.html"><i class="fa-solid fa-microchip"></i> COMPUTEKNO</a>
+        <p class="eyebrow">Área protegida</p>
+        <h1>Administración</h1>
+        <p class="intro">Gestiona productos, precios y existencias.</p>
+        <form id="loginForm" class="form-stack">
+          <label
+            >Usuario<input id="username" name="username" autocomplete="username" required
+          /></label>
+          <label
+            >Contraseña<input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+          /></label>
+          <p id="loginMessage" class="message" role="alert"></p>
+          <button class="primary-btn" type="submit">
+            <i class="fa-solid fa-right-to-bracket"></i> Ingresar
+          </button>
+        </form>
+      </section>
+
+      <section id="adminView" hidden>
+        <header class="topbar">
+          <a class="brand" href="index.html"><i class="fa-solid fa-microchip"></i> COMPUTEKNO</a>
+          <div class="topbar-actions">
+            <span>Panel administrativo</span
+            ><button id="logoutButton" class="text-btn" type="button">Cerrar sesión</button>
+          </div>
+        </header>
+
+        <div class="admin-grid">
+          <section class="panel form-panel">
+            <p class="eyebrow">Alta rápida</p>
+            <h1 id="productFormTitle">Agregar producto</h1>
+            <p class="panel-copy">
+              Registra nuevos componentes para vender desde la web en segundos.
+            </p>
+            <div class="quick-add-hint">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Completa nombre, categoría, precio, stock, imagen y descripción.</span>
+            </div>
+            <form id="productForm" class="form-stack">
+              <label>Nombre<input name="nombre" maxlength="255" required /></label>
+              <label
+                >Categoría<input
+                  name="categoria"
+                  maxlength="100"
+                  placeholder="Ej. Almacenamiento"
+                  required
+              /></label>
+              <div class="two-columns">
+                <label
+                  >Precio (S/)<input name="precio" type="number" min="0" step="0.01" required
+                /></label>
+                <label>Stock<input name="stock" type="number" min="0" step="1" required /></label>
+              </div>
+              <label
+                >URL de imagen
+                <input name="imagen" type="url" maxlength="500" placeholder="https://..."
+              /></label>
+              <label
+                >Descripción<textarea
+                  name="descripcion"
+                  rows="4"
+                  maxlength="10000"
+                  required
+                ></textarea>
+              </label>
+              <p id="productMessage" class="message" role="alert"></p>
+              <div class="form-actions">
+                <button class="primary-btn" type="submit">
+                  <i class="fa-solid fa-floppy-disk"></i> Guardar producto
+                </button>
+                <button id="cancelEditButton" class="secondary-btn" type="button" hidden>
+                  Cancelar edición
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel catalog-panel">
+            <div class="catalog-heading">
+              <div>
+                <p class="eyebrow">Catálogo</p>
+                <h2>Productos registrados</h2>
+              </div>
+              <button id="refreshButton" class="secondary-btn" type="button">
+                <i class="fa-solid fa-rotate"></i> Actualizar
+              </button>
+            </div>
+            <p id="catalogMessage" class="message" role="status"></p>
+            <div id="adminCatalog" class="admin-catalog"></div>
+
+            <div class="sales-history">
+              <div class="catalog-heading sales-heading">
+                <div>
+                  <p class="eyebrow">Solicitudes</p>
+                  <h2>Solicitudes pendientes</h2>
+                </div>
+              </div>
+              <div class="status-legend">
+                <span><strong>Pendiente:</strong> el cliente aún no ha realizado la compra</span>
+                <span
+                  ><strong>Confirmada:</strong> el pago quedó aceptado y el producto está pendiente
+                  de entrega</span
+                >
+                <span><strong>Entregado:</strong> el administrador ya entregó el producto</span>
+                <span><strong>Cancelado:</strong> la compra fue cancelada</span>
+              </div>
+              <div id="requestsList" class="sales-list"></div>
+            </div>
+
+            <div class="sales-history">
+              <div class="catalog-heading sales-heading">
+                <div>
+                  <p class="eyebrow">Ventas</p>
+                  <h2>Ventas confirmadas</h2>
+                </div>
+              </div>
+              <div id="salesList" class="sales-list"></div>
+            </div>
+
+            <div class="sales-history">
+              <div class="catalog-heading sales-heading">
+                <div>
+                  <p class="eyebrow">Entregadas</p>
+                  <h2>Ventas entregadas</h2>
+                </div>
+              </div>
+              <div id="deliveredList" class="sales-list"></div>
+            </div>
+
+            <div class="sales-history">
+              <div class="catalog-heading sales-heading">
+                <div>
+                  <p class="eyebrow">Canceladas</p>
+                  <h2>Ventas canceladas</h2>
+                </div>
+              </div>
+              <div id="cancelledList" class="sales-list"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
