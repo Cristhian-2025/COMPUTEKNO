@@ -1,3 +1,3 @@
 window.COMPUTEKNO_CONFIG = {
-  API_URL: 'http://127.0.0.1:3000',
+  API_URL: 'computekno-production.up.railway.app',
 };
