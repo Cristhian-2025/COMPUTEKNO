@@ -1049,6 +1049,33 @@ footer {
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom-links .footer-made-with i {
+  color: #e11d48;
 }
 
 /* --- Franja de confianza (RUC + Facturación) --- */
