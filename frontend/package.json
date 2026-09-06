@@ -1,8 +1,8 @@
 {
-  "name": "computekno-frontend",
+  "name": "sunetya-frontend",
   "version": "1.0.0",
   "private": true,
-  "description": "Frontend estático de COMPUTEKNO",
+  "description": "Frontend estático de SUNETYA",
   "scripts": {
     "start": "npx live-server --port=5500 --host=127.0.0.1 --open=./index.html --quiet",
     "lint": "eslint . --ext .js --ignore-path ../.eslintignore",

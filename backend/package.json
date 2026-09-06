@@ -1,7 +1,7 @@
 {
-  "name": "computekno-backend",
+  "name": "sunetya-backend",
   "version": "1.0.0",
-  "description": "Backend para Computekno",
+  "description": "Backend para Sunetya",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",

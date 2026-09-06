@@ -7,7 +7,7 @@ const { info, error } = require('./lib/logger');
 db.initializeDatabase()
   .then(() => {
     app.listen(PORT, () => {
-      info(`Servidor COMPUTEKNO ejecutándose en puerto ${PORT}`);
+      info(`Servidor SUNETYA ejecutándose en puerto ${PORT}`);
       info(`Modo: ${process.env.NODE_ENV || 'development'}`);
       info(`URL: http://localhost:${PORT}`);
       info(`API: http://localhost:${PORT}/api/health`);

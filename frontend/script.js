@@ -1,6 +1,6 @@
 /* exported solicitarServicio */
 // --- BUSCADOR DE SERVICIOS ---
-const API_URL = window.COMPUTEKNO_CONFIG?.API_URL || 'http://127.0.0.1:3000';
+const API_URL = window.SUNETYA_CONFIG?.API_URL || 'http://127.0.0.1:3000';
 const IMAGEN_COMPONENTE_POR_DEFECTO = 'assets/26157-MK10212A.jpg';
 
 function escapeHtml(value) {
@@ -197,10 +197,10 @@ if (inputBusquedaNavbar) {
 
 // Función para abrir WhatsApp
 function solicitarServicio(nombreServicio) {
-  // Número corporativo de COMPUTEKNO
+  // Número corporativo de SUNETYA
   const telefono = '51901348331';
 
-  const mensaje = `Hola COMPUTEKNO, me interesa el servicio de: *${nombreServicio}*. ¿Podrían darme más información?`;
+  const mensaje = `Hola SUNETYA, me interesa el servicio de: *${nombreServicio}*. ¿Podrían darme más información?`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, '_blank');
@@ -583,7 +583,7 @@ function abrirModalPago() {
   }
 
   if (btn && productoActual) {
-    const mensaje = `¡Hola COMPUTEKNO! 👋 Vengo de su página web.${textoEstacion()}`;
+    const mensaje = `¡Hola SUNETYA! 👋 Vengo de su página web.${textoEstacion()}`;
     btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
   }
 
@@ -618,8 +618,8 @@ function copiarNumero() {
 function consultarProducto() {
   const comp = productoActual;
   const mensaje = comp
-    ? `¡Hola COMPUTEKNO! 👋 Vengo de su página web. Quisiera consultar sobre el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
-    : '¡Hola COMPUTEKNO! 👋 Vengo de su página web. Quisiera hacer una consulta.';
+    ? `¡Hola SUNETYA! 👋 Vengo de su página web. Quisiera consultar sobre el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
+    : '¡Hola SUNETYA! 👋 Vengo de su página web. Quisiera hacer una consulta.';
   abrirWhatsApp(mensaje);
   cerrarModalOpciones();
 }
@@ -627,8 +627,8 @@ function consultarProducto() {
 function servicioTecnico() {
   const comp = productoActual;
   const mensaje = comp
-    ? `¡Hola COMPUTEKNO! 👋 Vengo de su página web. Necesito asistencia de servicio técnico para el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
-    : '¡Hola COMPUTEKNO! 👋 Vengo de su página web. Necesito servicio técnico.';
+    ? `¡Hola SUNETYA! 👋 Vengo de su página web. Necesito asistencia de servicio técnico para el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
+    : '¡Hola SUNETYA! 👋 Vengo de su página web. Necesito servicio técnico.';
   abrirWhatsApp(mensaje);
   cerrarModalOpciones();
 }
@@ -636,8 +636,8 @@ function servicioTecnico() {
 function atencionPersonalizada() {
   const comp = productoActual;
   const mensaje = comp
-    ? `¡Hola COMPUTEKNO! 👋 Vengo de su página web. Me gustaría recibir atención personalizada sobre el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
-    : '¡Hola COMPUTEKNO! 👋 Vengo de su página web. Me gustaría atención personalizada.';
+    ? `¡Hola SUNETYA! 👋 Vengo de su página web. Me gustaría recibir atención personalizada sobre el producto *${comp.nombre}* (S/ ${comp.precio}).${textoEstacion()}`
+    : '¡Hola SUNETYA! 👋 Vengo de su página web. Me gustaría atención personalizada.';
   abrirWhatsApp(mensaje);
   cerrarModalOpciones();
 }
@@ -695,7 +695,7 @@ function inicializarFiltros() {
 // Abrir WhatsApp con mensaje personalizado del componente
 function solicitarComponente(nombre, precio) {
   const telefono = '51901348331';
-  const mensaje = `Hola COMPUTEKNO, estoy interesado en comprar el componente: *${nombre}* (S/ ${precio}). ¿Cuentan con stock disponible?`;
+  const mensaje = `Hola SUNETYA, estoy interesado en comprar el componente: *${nombre}* (S/ ${precio}). ¿Cuentan con stock disponible?`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 }

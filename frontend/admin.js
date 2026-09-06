@@ -1,5 +1,5 @@
-const API_URL = window.COMPUTEKNO_CONFIG?.API_URL || 'http://127.0.0.1:3000';
-const tokenKey = 'computekno_admin_token';
+const API_URL = window.SUNETYA_CONFIG?.API_URL || 'http://127.0.0.1:3000';
+const tokenKey = 'sunetya_admin_token';
 const state = { componentes: [], ventas: [], solicitudes: [], entregadas: [], canceladas: [] };
 
 const loginView = document.getElementById('loginView');
@@ -364,7 +364,7 @@ async function confirmarVenta(event) {
     );
 
     localStorage.setItem(
-      'computekno:stock-sync',
+      'sunetya:stock-sync',
       JSON.stringify({
         id,
         stock: resultado.stock,
@@ -392,7 +392,7 @@ async function confirmarSolicitud(event) {
   try {
     const resultado = await api(`/api/admin/solicitudes/${id}/confirmar`, { method: 'POST' });
     localStorage.setItem(
-      'computekno:stock-sync',
+      'sunetya:stock-sync',
       JSON.stringify({
         id,
         stock: resultado.stock,

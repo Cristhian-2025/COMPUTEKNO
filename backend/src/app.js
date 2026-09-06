@@ -38,7 +38,7 @@ app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
   res.json({
-    mensaje: 'Servidor COMPUTEKNO activo',
+    mensaje: 'Servidor SUNETYA activo',
     version: '1.0.0',
     status: 'OK',
   });

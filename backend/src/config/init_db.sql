@@ -1,5 +1,5 @@
 -- ======================================================
--- Script SQL para COMPUTEKNO - Base de Datos MySQL
+-- Script SQL para SUNETYA - Base de Datos MySQL
 -- Crea tablas: servicios y componentes
 -- e inserta los datos del catálogo actual
 -- ======================================================

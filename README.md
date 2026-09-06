@@ -1,6 +1,6 @@
-# COMPUTEKNO
+# SUNETYA
 
-Repositorio del proyecto COMPUTEKNO con backend de Express + MySQL y frontend estático.
+Repositorio del proyecto SUNETYA con backend de Express + MySQL y frontend estático.
 
 ## Estructura
 
